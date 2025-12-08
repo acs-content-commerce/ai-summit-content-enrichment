@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.aem.page/
-- Live: https://main--{repo}--{owner}.aem.live/
+- Preview: https://main--ai-summit-content-enrichment--t-mah.aem.page/
+- Live: https://main--ai-summit-content-enrichment--t-mah.aem.live/
 
 ## Documentation
 

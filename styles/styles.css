@@ -110,6 +110,7 @@ h6 {
   font-weight: 600;
   line-height: 1.25;
   scroll-margin: 40px;
+  color: white;
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
@@ -242,6 +243,10 @@ main > .section:first-of-type {
   margin-top: 0;
 }
 
+main > .section.hero-container + .section {
+  margin-top: 0;
+}
+
 @media (width >= 900px) {
   main > .section > div {
     padding: 0 32px;
@@ -251,7 +256,7 @@ main > .section:first-of-type {
 /* section metadata */
 main .section.light,
 main .section.highlight {
-  background-color: var(--light-color);
+  /*background-color: var(--light-color);*/
   margin: 0;
   padding: 40px 0;
 }

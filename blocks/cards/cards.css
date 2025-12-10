@@ -69,6 +69,20 @@
   grid-column: 4 / span 2;
 }
 
+/* Team cards with more than 5: evenly spaced 3 per row */
+.cards.team.team-many > ul {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cards.team.team-many > ul > li {
+  grid-column: span 1;
+}
+
+.cards.team.team-many > ul > li:nth-child(4),
+.cards.team.team-many > ul > li:nth-child(5) {
+  grid-column: span 1;
+}
+
 /* Project cards: full-bleed image with overlaid text */
 .cards.project > ul > li {
   position: relative;

@@ -16,5 +16,35 @@ export default async function decorate(block) {
   const footer = document.createElement('div');
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
+  // Decorate footer rows
+  const rows = footer.querySelectorAll(':scope > div');
+  rows.forEach((row, index) => {
+    if (index === 0) {
+      // First row: QR code
+      row.classList.add('footer-qr');
+      const link = row.querySelector('a');
+      if (link) {
+        link.href = '/';
+        link.title = 'Scan to visit homepage';
+      }
+    } else if (index === 1) {
+      // Second row: Demo recording
+      row.classList.add('footer-demo');
+      const link = row.querySelector('a');
+      if (link) {
+        link.classList.add('footer-link', 'footer-demo-link');
+        link.target = '_blank';
+      }
+    } else if (index === 2) {
+      // Third row: PDF presentation
+      row.classList.add('footer-pdf');
+      const link = row.querySelector('a');
+      if (link) {
+        link.classList.add('footer-link', 'footer-pdf-link');
+        link.target = '_blank';
+      }
+    }
+  });
+
   block.append(footer);
 }

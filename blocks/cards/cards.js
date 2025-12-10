@@ -83,5 +83,11 @@ export default function decorate(block) {
   // Setup modals for team cards
   if (block.classList.contains('team')) {
     setupTeamModals(block, ul);
+
+    // Add class for more than 5 cards to use standard 3-column layout
+    const cardCount = ul.querySelectorAll('li').length;
+    if (cardCount > 5) {
+      block.classList.add('team-many');
+    }
   }
 }

@@ -1,4 +1,4 @@
 mountpoints:
   /:
-    url: https://content.da.live/t-mah/ai-summit-content-enrichment/
+    url: https://content.da.live/acs-content-commerce/ai-summit-content-enrichment/
     type: markup
